@@ -17,7 +17,7 @@ export const WhoWeAreSection = () => {
             padding: 'clamp(2rem, 5vw, 4rem)'
           }}
         >
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(1.5rem, 4vw, 3rem)', alignItems: 'center' }}>
             
             {/* Left Side: Headline & Content */}
             <div>
@@ -47,7 +47,7 @@ export const WhoWeAreSection = () => {
                 background: 'rgba(11, 14, 20, 0.7)',
                 border: '1px solid var(--color-border-gold-strong)',
                 borderRadius: 'var(--radius-md)',
-                padding: '2rem',
+                padding: 'clamp(1.25rem, 3.5vw, 2rem)',
                 position: 'relative'
               }}
             >

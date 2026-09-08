@@ -8,7 +8,7 @@ export const VisionMissionSection = () => {
   return (
     <section className="section-padding section-bg-alt">
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(1.5rem, 4vw, 2.5rem)' }}>
           
           {/* Vision Card */}
           <div 

@@ -26,8 +26,8 @@ export const MethodologySection = () => {
         <div 
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '1.5rem',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
+            gap: '1.25rem',
             position: 'relative'
           }}
           className="methodology-grid"

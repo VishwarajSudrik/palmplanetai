@@ -32,7 +32,7 @@ export const HeroSection = () => {
       />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(1.5rem, 4vw, 3rem)', alignItems: 'center' }}>
           
           {/* Hero Left Content */}
           <div>
@@ -45,7 +45,7 @@ export const HeroSection = () => {
             </p>
 
             {/* CTAs */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginBottom: '2.25rem' }}>
+            <div className="hero-cta-group" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginBottom: '2.25rem' }}>
               <Link to="/services" className="btn btn-primary">
                 <span>{primaryCta}</span>
                 <ArrowRight size={17} />
@@ -60,7 +60,7 @@ export const HeroSection = () => {
               style={{
                 display: 'flex',
                 flexWrap: 'wrap',
-                gap: '1.5rem',
+                gap: '1.25rem',
                 paddingTop: '1.25rem',
                 borderTop: '1px solid var(--color-border-subtle)',
                 fontSize: '0.875rem',
@@ -68,11 +68,11 @@ export const HeroSection = () => {
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <CheckCircle2 size={16} style={{ color: 'var(--color-accent-gold)' }} />
+                <CheckCircle2 size={16} style={{ color: 'var(--color-accent-gold)', flexShrink: 0 }} />
                 <span>Virtual & Physical Consultations</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <ShieldCheck size={16} style={{ color: 'var(--color-accent-gold)' }} />
+                <ShieldCheck size={16} style={{ color: 'var(--color-accent-gold)', flexShrink: 0 }} />
                 <span>Empirical Cross-Validation</span>
               </div>
             </div>
