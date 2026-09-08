@@ -87,6 +87,34 @@ body {
   }
 }
 
+/* Responsive Mobile Centering Rules */
+@media (max-width: 768px) {
+  .responsive-btn-group {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .responsive-btn-group .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .responsive-feature-highlights {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .responsive-center-banner {
+    flex-direction: column !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .responsive-banner-text {
+    text-align: center !important;
+  }
+}
+
 /* Skip Link */
 .skip-link {
   position: absolute;

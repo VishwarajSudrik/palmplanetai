@@ -45,7 +45,7 @@ export const HeroSection = () => {
             </p>
 
             {/* CTAs */}
-            <div className="hero-cta-group" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginBottom: '2.25rem' }}>
+            <div className="hero-cta-group responsive-btn-group" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginBottom: '2.25rem' }}>
               <Link to="/services" className="btn btn-primary">
                 <span>{primaryCta}</span>
                 <ArrowRight size={17} />
@@ -57,6 +57,7 @@ export const HeroSection = () => {
 
             {/* Feature Highlights */}
             <div 
+              className="responsive-feature-highlights"
               style={{
                 display: 'flex',
                 flexWrap: 'wrap',

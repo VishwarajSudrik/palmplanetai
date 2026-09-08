@@ -52,7 +52,7 @@ export const HomePage = () => {
       <section className="section-padding" style={{ position: 'relative' }}>
         <div className="container">
           <div 
-            className="glass-card"
+            className="glass-card responsive-center-banner"
             style={{
               background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(22, 29, 43, 0.95) 100%)',
               border: '1px solid var(--color-border-gold-strong)',
@@ -64,7 +64,7 @@ export const HomePage = () => {
               padding: 'clamp(2rem, 4vw, 3.5rem)'
             }}
           >
-            <div style={{ maxWidth: '600px' }}>
+            <div style={{ maxWidth: '600px' }} className="responsive-banner-text">
               <span className="eyebrow">Virtual & Personal Consultations</span>
               <h2 className="h2-title" style={{ marginTop: '0.4rem', marginBottom: '0.75rem' }}>
                 Schedule Your Detailed Astrological Reading
@@ -74,7 +74,7 @@ export const HomePage = () => {
               </p>
             </div>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }} className="responsive-btn-group">
               <Link to="/booking" className="btn btn-primary">
                 <Calendar size={18} />
                 <span>Book Appointment</span>

@@ -66,15 +66,15 @@ export const ServiceCarousel = () => {
       <div 
         style={{
           display: 'flex',
-          flexWrap: 'wrap',
-          gap: '12px',
+          flexDirection: 'column',
           alignItems: 'center',
-          justifyContent: 'space-between',
-          marginBottom: '2rem'
+          gap: '1.25rem',
+          marginBottom: '2.25rem',
+          textAlign: 'center'
         }}
       >
         {/* Category Pills */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center' }}>
           <button
             onClick={() => handleCategoryChange('all')}
             style={{
@@ -116,7 +116,7 @@ export const ServiceCarousel = () => {
         </div>
 
         {/* Carousel Arrow Navigation Buttons */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
           <button
             onClick={() => setIsAutoplay(!isAutoplay)}
             aria-label={isAutoplay ? "Pause slider autoplay" : "Start slider autoplay"}
@@ -124,8 +124,8 @@ export const ServiceCarousel = () => {
               background: 'rgba(255, 255, 255, 0.04)',
               border: '1px solid var(--color-border-subtle)',
               color: 'var(--color-text-muted)',
-              width: '36px',
-              height: '36px',
+              width: '38px',
+              height: '38px',
               borderRadius: '50%',
               display: 'flex',
               alignItems: 'center',
@@ -144,8 +144,8 @@ export const ServiceCarousel = () => {
               background: 'rgba(212, 175, 55, 0.1)',
               border: '1px solid var(--color-border-gold)',
               color: 'var(--color-accent-gold)',
-              width: '40px',
-              height: '40px',
+              width: '42px',
+              height: '42px',
               borderRadius: '50%',
               display: 'flex',
               alignItems: 'center',
@@ -172,8 +172,8 @@ export const ServiceCarousel = () => {
               background: 'rgba(212, 175, 55, 0.1)',
               border: '1px solid var(--color-border-gold)',
               color: 'var(--color-accent-gold)',
-              width: '40px',
-              height: '40px',
+              width: '42px',
+              height: '42px',
               borderRadius: '50%',
               display: 'flex',
               alignItems: 'center',

@@ -30,7 +30,7 @@ export const WhoWeAreSection = () => {
                 {description}
               </p>
 
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
+              <div className="responsive-btn-group" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
                 <Link to="/about-us" className="btn btn-primary">
                   <span>Read More</span>
                   <ArrowRight size={16} />
