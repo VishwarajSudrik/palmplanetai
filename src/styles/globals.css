@@ -221,6 +221,26 @@ body {
   transition: border-color var(--transition-fast);
 }
 
+select option,
+.form-select option {
+  background-color: #161D2B !important;
+  color: #FFFFFF !important;
+  font-size: 0.95rem;
+  padding: 8px 12px;
+}
+
+select option:hover,
+select option:focus,
+select option:active,
+select option:checked,
+.form-select option:hover,
+.form-select option:focus,
+.form-select option:active,
+.form-select option:checked {
+  background-color: #222D42 !important;
+  color: #D4AF37 !important;
+}
+
 .form-input:focus, .form-textarea:focus, .form-select:focus {
   border-color: var(--color-accent-gold);
   outline: none;
@@ -234,7 +254,7 @@ body {
 
 /* Section Wrapper */
 .section-padding {
-  padding-block: clamp(3.5rem, 7vw, 6.5rem);
+  padding-block: clamp(2.25rem, 4.5vw, 4.25rem);
 }
 
 .section-bg-alt {

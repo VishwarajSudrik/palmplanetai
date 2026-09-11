@@ -14,72 +14,66 @@ export const FounderHighlight = () => {
           style={{
             background: 'linear-gradient(135deg, rgba(22, 29, 43, 0.9) 0%, rgba(13, 17, 24, 0.95) 100%)',
             border: '1px solid var(--color-border-gold)',
-            padding: 'clamp(2rem, 5vw, 4rem)'
+            padding: 'clamp(1.75rem, 4vw, 3rem)'
           }}
         >
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(1.5rem, 4vw, 3rem)', alignItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(1.5rem, 3.5vw, 2.5rem)', alignItems: 'center' }}>
             
             {/* Left Column: Bio Details */}
             <div>
               <span className="eyebrow">Leadership & Research</span>
-              <h2 className="h2-title" style={{ marginTop: '0.4rem', marginBottom: '0.5rem' }}>
+              <h2 className="h2-title" style={{ marginTop: '0.4rem', marginBottom: '0.3rem', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}>
                 {name}
               </h2>
-              <div style={{ fontSize: '0.95rem', color: 'var(--color-accent-gold)', fontWeight: '600', marginBottom: '1.25rem' }}>
+              <div style={{ fontSize: '0.9rem', color: 'var(--color-accent-gold)', fontWeight: '600', marginBottom: '1rem' }}>
                 {role} | {credential}
               </div>
-              <p className="lead-text" style={{ fontSize: '1rem', marginBottom: '1.5rem', lineHeight: '1.7' }}>
+              <p className="lead-text" style={{ fontSize: '0.95rem', marginBottom: '1.25rem', lineHeight: '1.65' }}>
                 {intro}
               </p>
 
               {/* Engineering + Astrology Badges */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
-                <div style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--color-border-subtle)', padding: '12px 16px', borderRadius: 'var(--radius-sm)' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-accent-gold)', fontWeight: '600', marginBottom: '4px', fontSize: '0.9rem' }}>
-                    <Cpu size={16} />
-                    <span>25+ Years Engineering</span>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '0.75rem', marginBottom: '1.5rem' }}>
+                <div style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--color-border-subtle)', padding: '10px 14px', borderRadius: 'var(--radius-sm)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--color-accent-gold)', fontWeight: '600', fontSize: '0.85rem' }}>
+                    <Cpu size={15} />
+                    <span>25+ Yrs FEA Design</span>
                   </div>
-                  <div style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)' }}>FEA & Mechanical Design Services</div>
                 </div>
 
-                <div style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--color-border-subtle)', padding: '12px 16px', borderRadius: 'var(--radius-sm)' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-accent-gold)', fontWeight: '600', marginBottom: '4px', fontSize: '0.9rem' }}>
-                    <BookOpen size={16} />
-                    <span>12+ Years Vedic Research</span>
+                <div style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--color-border-subtle)', padding: '10px 14px', borderRadius: 'var(--radius-sm)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--color-accent-gold)', fontWeight: '600', fontSize: '0.85rem' }}>
+                    <BookOpen size={15} />
+                    <span>12+ Yrs Vedic Research</span>
                   </div>
-                  <div style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)' }}>Vedic Astrology & Puranic Sciences</div>
                 </div>
               </div>
 
-              <Link to="/about-us" className="btn btn-outline">
+              <Link to="/about-us" className="btn btn-outline" style={{ padding: '0.65rem 1.4rem', fontSize: '0.88rem' }}>
                 <span>Read Full Biography</span>
-                <ArrowRight size={16} />
+                <ArrowRight size={15} />
               </Link>
             </div>
 
             {/* Right Column: Disciplines Grid */}
-            <div style={{ background: 'rgba(11, 14, 20, 0.6)', border: '1px solid var(--color-border-subtle)', borderRadius: 'var(--radius-md)', padding: '1.75rem' }}>
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '1.25rem', color: 'var(--color-text-primary)', fontFamily: 'var(--font-heading)' }}>
-                Holistic Predictive Disciplines
+            <div style={{ background: 'rgba(11, 14, 20, 0.6)', border: '1px solid var(--color-border-subtle)', borderRadius: 'var(--radius-md)', padding: '1.25rem 1.5rem' }}>
+              <h3 style={{ fontSize: '1.1rem', marginBottom: '1rem', color: 'var(--color-text-primary)', fontFamily: 'var(--font-heading)' }}>
+                Predictive Disciplines
               </h3>
               
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
                 {disciplines.map((d, i) => (
                   <div 
                     key={i} 
                     style={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      gap: '12px',
-                      paddingBottom: i < disciplines.length - 1 ? '1rem' : 0,
-                      borderBottom: i < disciplines.length - 1 ? '1px solid var(--color-border-subtle)' : 'none'
+                      background: 'rgba(255, 255, 255, 0.03)',
+                      border: '1px solid var(--color-border-subtle)',
+                      padding: '10px 12px',
+                      borderRadius: 'var(--radius-sm)'
                     }}
                   >
-                    <Sparkles size={18} style={{ color: 'var(--color-accent-gold)', flexShrink: 0, marginTop: '2px' }} />
-                    <div>
-                      <div style={{ fontSize: '0.95rem', fontWeight: '600', color: 'var(--color-text-primary)' }}>{d.name}</div>
-                      <div style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>{d.desc}</div>
-                    </div>
+                    <div style={{ fontSize: '0.88rem', fontWeight: '600', color: 'var(--color-accent-gold)', marginBottom: '2px' }}>{d.name}</div>
+                    <div style={{ fontSize: '0.78rem', color: 'var(--color-text-muted)' }}>{d.desc}</div>
                   </div>
                 ))}
               </div>

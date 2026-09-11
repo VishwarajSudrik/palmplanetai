@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+import fs from 'fs';
+
+// Copy dist files to root directory for gh-pages / static deployment
+fs.cpSync('dist', '.', { recursive: true });
+
+// Ensure root index.html points to /src/main.jsx so Vite dev server works dynamically
+const devIndexHtml = `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -39,3 +45,7 @@
     <div id="root"></div>
   </body>
 </html>
+`;
+
+fs.writeFileSync('index.html', devIndexHtml);
+console.log('Postbuild completed: root index.html restored to /src/main.jsx for Vite dev server.');

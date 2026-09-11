@@ -2,6 +2,7 @@ export const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/about-us' },
   { name: 'Services', path: '/services' },
+  { name: 'MYReport', path: '/astrology', isAstrologyMenu: true },
   { name: 'Astro Blog', path: '/astro-blog' },
   { name: 'Contact', path: '/contact' }
 ];

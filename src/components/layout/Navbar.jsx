@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Menu, X, Calendar, Phone, Mail } from 'lucide-react';
+import { Menu, X, Calendar, Phone, Mail, Sparkles } from 'lucide-react';
 import { navLinks, contactInfo } from '../../data/navigationData';
 import { siteContent } from '../../data/siteContent';
+import { AstrologyNavbarMenu } from '../astrology/AstrologyNavbarMenu';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -109,47 +110,56 @@ export const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav style={{ display: 'flex', alignItems: 'center', gap: '2rem' }} className="desktop-only">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.path}
-                to={link.path}
-                style={({ isActive }) => ({
-                  color: isActive ? 'var(--color-accent-gold)' : 'var(--color-text-secondary)',
-                  textDecoration: 'none',
-                  fontSize: '0.925rem',
-                  fontWeight: isActive ? '600' : '500',
-                  position: 'relative',
-                  paddingBlock: '6px',
-                  transition: 'color var(--transition-fast)'
-                })}
-              >
-                {({ isActive }) => (
-                  <>
-                    {link.name}
-                    {isActive && (
-                      <span 
-                        style={{
-                          position: 'absolute',
-                          bottom: 0,
-                          left: 0,
-                          right: 0,
-                          height: '2px',
-                          backgroundColor: 'var(--color-accent-gold)',
-                          borderRadius: '2px'
-                        }} 
-                      />
-                    )}
-                  </>
-                )}
-              </NavLink>
-            ))}
+          <nav style={{ display: 'flex', alignItems: 'center', gap: '1.75rem' }} className="desktop-only">
+            {navLinks.map((link) => {
+              if (link.isAstrologyMenu) {
+                return <AstrologyNavbarMenu key={link.path} label={link.name} />;
+              }
+              return (
+                <NavLink
+                  key={link.path}
+                  to={link.path}
+                  style={({ isActive }) => ({
+                    color: isActive ? 'var(--color-accent-gold)' : 'var(--color-text-secondary)',
+                    textDecoration: 'none',
+                    fontSize: '0.925rem',
+                    fontWeight: isActive ? '600' : '500',
+                    position: 'relative',
+                    paddingBlock: '6px',
+                    transition: 'color var(--transition-fast)'
+                  })}
+                >
+                  {({ isActive }) => (
+                    <>
+                      {link.name}
+                      {isActive && (
+                        <span 
+                          style={{
+                            position: 'absolute',
+                            bottom: 0,
+                            left: 0,
+                            right: 0,
+                            height: '2px',
+                            backgroundColor: 'var(--color-accent-gold)',
+                            borderRadius: '2px'
+                          }} 
+                        />
+                      )}
+                    </>
+                  )}
+                </NavLink>
+              );
+            })}
           </nav>
 
-          {/* Desktop Action Button */}
-          <div className="desktop-only">
-            <Link to="/booking" className="btn btn-primary" style={{ padding: '0.6rem 1.25rem', fontSize: '0.875rem' }}>
-              <Calendar size={15} />
+          {/* Desktop Action Buttons */}
+          <div className="desktop-only" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <Link to="/astrology/birth-details" className="btn btn-outline" style={{ padding: '0.55rem 1rem', fontSize: '0.85rem' }}>
+              <Sparkles size={14} style={{ color: 'var(--color-accent-gold)' }} />
+              Generate Report
+            </Link>
+            <Link to="/booking" className="btn btn-primary" style={{ padding: '0.55rem 1.15rem', fontSize: '0.85rem' }}>
+              <Calendar size={14} />
               Book Appointment
             </Link>
           </div>
@@ -221,24 +231,36 @@ export const Navbar = () => {
           </div>
 
           {/* Drawer Links */}
-          <nav style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.path}
-                to={link.path}
-                onClick={() => setIsMobileMenuOpen(false)}
-                style={({ isActive }) => ({
-                  color: isActive ? 'var(--color-accent-gold)' : 'var(--color-text-primary)',
-                  fontSize: '1.35rem',
-                  fontFamily: 'var(--font-heading)',
-                  textDecoration: 'none',
-                  paddingBlock: '8px',
-                  borderBottom: '1px solid var(--color-border-subtle)'
-                })}
-              >
-                {link.name}
-              </NavLink>
-            ))}
+          <nav style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', overflowY: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
+            {navLinks.map((link) => {
+              if (link.isAstrologyMenu) {
+                return (
+                  <AstrologyNavbarMenu 
+                    key={link.path}
+                    isMobile={true} 
+                    label={link.name}
+                    onItemClick={() => setIsMobileMenuOpen(false)} 
+                  />
+                );
+              }
+              return (
+                <NavLink
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  style={({ isActive }) => ({
+                    color: isActive ? 'var(--color-accent-gold)' : 'var(--color-text-primary)',
+                    fontSize: '1.35rem',
+                    fontFamily: 'var(--font-heading)',
+                    textDecoration: 'none',
+                    paddingBlock: '8px',
+                    borderBottom: '1px solid var(--color-border-subtle)'
+                  })}
+                >
+                  {link.name}
+                </NavLink>
+              );
+            })}
           </nav>
 
           {/* Drawer Footer Cta */}

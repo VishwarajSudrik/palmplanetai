@@ -8,7 +8,7 @@ export const VisionMissionSection = () => {
   return (
     <section className="section-padding section-bg-alt">
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(1.5rem, 4vw, 2.5rem)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(1.25rem, 3vw, 2rem)' }}>
           
           {/* Vision Card */}
           <div 
@@ -17,21 +17,21 @@ export const VisionMissionSection = () => {
               position: 'relative',
               background: 'linear-gradient(145deg, rgba(22, 29, 43, 0.8) 0%, rgba(13, 17, 24, 0.9) 100%)',
               border: '1px solid var(--color-border-gold)',
-              padding: 'clamp(2rem, 4vw, 3rem)'
+              padding: 'clamp(1.5rem, 3vw, 2.25rem)'
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '1.25rem' }}>
-              <div style={{ background: 'rgba(212, 175, 55, 0.12)', border: '1px solid var(--color-border-gold)', padding: '10px', borderRadius: '50%', color: 'var(--color-accent-gold)' }}>
-                <Eye size={22} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.85rem' }}>
+              <div style={{ background: 'rgba(212, 175, 55, 0.12)', border: '1px solid var(--color-border-gold)', padding: '7px', borderRadius: '50%', color: 'var(--color-accent-gold)' }}>
+                <Eye size={18} />
               </div>
               <span className="eyebrow" style={{ margin: 0 }}>Strategic Foundation</span>
             </div>
 
-            <h2 className="h2-title" style={{ fontSize: '1.85rem', marginBottom: '1rem', color: 'var(--color-text-primary)' }}>
+            <h3 className="h2-title" style={{ fontSize: '1.35rem', marginBottom: '0.6rem', color: 'var(--color-text-primary)' }}>
               {vision.title}
-            </h2>
+            </h3>
 
-            <p style={{ fontSize: '1.05rem', color: 'var(--color-text-secondary)', lineHeight: '1.75' }}>
+            <p style={{ fontSize: '0.95rem', color: 'var(--color-text-secondary)', lineHeight: '1.6', margin: 0 }}>
               "{vision.text}"
             </p>
           </div>
@@ -43,21 +43,21 @@ export const VisionMissionSection = () => {
               position: 'relative',
               background: 'linear-gradient(145deg, rgba(22, 29, 43, 0.8) 0%, rgba(13, 17, 24, 0.9) 100%)',
               border: '1px solid var(--color-border-gold)',
-              padding: 'clamp(2rem, 4vw, 3rem)'
+              padding: 'clamp(1.5rem, 3vw, 2.25rem)'
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '1.25rem' }}>
-              <div style={{ background: 'rgba(212, 175, 55, 0.12)', border: '1px solid var(--color-border-gold)', padding: '10px', borderRadius: '50%', color: 'var(--color-accent-gold)' }}>
-                <Target size={22} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.85rem' }}>
+              <div style={{ background: 'rgba(212, 175, 55, 0.12)', border: '1px solid var(--color-border-gold)', padding: '7px', borderRadius: '50%', color: 'var(--color-accent-gold)' }}>
+                <Target size={18} />
               </div>
               <span className="eyebrow" style={{ margin: 0 }}>Action & Purpose</span>
             </div>
 
-            <h2 className="h2-title" style={{ fontSize: '1.85rem', marginBottom: '1rem', color: 'var(--color-text-primary)' }}>
+            <h3 className="h2-title" style={{ fontSize: '1.35rem', marginBottom: '0.6rem', color: 'var(--color-text-primary)' }}>
               {mission.title}
-            </h2>
+            </h3>
 
-            <p style={{ fontSize: '1.05rem', color: 'var(--color-text-secondary)', lineHeight: '1.75' }}>
+            <p style={{ fontSize: '0.95rem', color: 'var(--color-text-secondary)', lineHeight: '1.6', margin: 0 }}>
               "{mission.text}"
             </p>
           </div>

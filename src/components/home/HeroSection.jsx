@@ -111,20 +111,17 @@ export const HeroSection = () => {
                 <span>Triple-Method Cross Validation</span>
               </div>
 
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>
-                Precision Predictive Research
+              <h3 style={{ fontSize: '1.35rem', marginBottom: '0.75rem', fontFamily: 'var(--font-heading)', color: 'var(--color-text-primary)' }}>
+                Multi-Disciplinary Synthesis
               </h3>
-              <p style={{ fontSize: '0.925rem', color: 'var(--color-text-secondary)', marginBottom: '1.5rem', lineHeight: '1.65' }}>
-                Combining Horoscope charts with Palm line markings, palmar mounts, and Vedic Numerology frequencies to achieve verified accuracy for life decision planning.
-              </p>
 
               {/* Method Matrix Pill List */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginTop: '1rem' }}>
                 {[
                   { name: 'Horoscope', detail: 'Jyotish Dasha & Vargas' },
-                  { name: 'Palmistry', detail: 'Lines & Palmar Mounts' },
-                  { name: 'Numerology', detail: 'Vedic Name & Date Sync' },
-                  { name: 'Gemology', detail: 'Resonance Guidance' }
+                  { name: 'Palmistry', detail: 'Palmar Lines & Mounts' },
+                  { name: 'Numerology', detail: 'Vedic Name & Date Frequencies' },
+                  { name: 'Gemology', detail: 'Energetic Resonance' }
                 ].map((item, idx) => (
                   <div 
                     key={idx}

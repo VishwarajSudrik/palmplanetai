@@ -19,14 +19,14 @@ export const MethodologySection = () => {
         <SectionHeader
           eyebrow="Scientific Approach"
           title="Empirical Cross-Validation Methodology"
-          description="We study and compare an individual’s horoscope with palm lines, palmar mounts, and Vedic Numerology to achieve verified predictive accuracy."
+          description="Cross-validating 3 complementary predictive sciences to eliminate analytical bias and achieve verified accuracy."
         />
 
         {/* 4 Cards in 1 Row Grid Container */}
         <div 
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
             gap: '1.25rem',
             position: 'relative'
           }}
@@ -39,28 +39,28 @@ export const MethodologySection = () => {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                justify: 'space-between',
+                justifyContent: 'space-between',
                 position: 'relative',
                 background: 'linear-gradient(145deg, rgba(22, 29, 43, 0.9) 0%, rgba(13, 17, 24, 0.95) 100%)',
                 border: '1px solid var(--color-border-gold)',
-                padding: '1.75rem 1.5rem',
+                padding: '1.5rem 1.25rem',
                 borderRadius: 'var(--radius-md)',
                 transition: 'all 300ms ease'
               }}
             >
               <div>
                 {/* Step Header: Badge & Icon */}
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
                   <span 
                     style={{
                       fontFamily: 'var(--font-heading)',
-                      fontSize: '1.25rem',
+                      fontSize: '1.1rem',
                       fontWeight: '700',
                       color: 'var(--color-accent-gold)',
                       background: 'rgba(212, 175, 55, 0.12)',
                       border: '1px solid var(--color-border-gold)',
-                      width: '42px',
-                      height: '42px',
+                      width: '36px',
+                      height: '36px',
                       borderRadius: '50%',
                       display: 'flex',
                       alignItems: 'center',
@@ -74,7 +74,7 @@ export const MethodologySection = () => {
                     style={{
                       background: 'rgba(255, 255, 255, 0.04)',
                       border: '1px solid var(--color-border-subtle)',
-                      padding: '10px',
+                      padding: '8px',
                       borderRadius: 'var(--radius-sm)'
                     }}
                   >
@@ -85,12 +85,12 @@ export const MethodologySection = () => {
                 {/* Subtitle Tag */}
                 <div 
                   style={{ 
-                    fontSize: '0.75rem', 
+                    fontSize: '0.72rem', 
                     color: 'var(--color-accent-gold)', 
                     fontWeight: '600', 
                     textTransform: 'uppercase', 
-                    letterSpacing: '0.12em', 
-                    marginBottom: '0.5rem' 
+                    letterSpacing: '0.1em', 
+                    marginBottom: '0.4rem' 
                   }}
                 >
                   {method.subtitle}
@@ -99,8 +99,8 @@ export const MethodologySection = () => {
                 {/* Title */}
                 <h3 
                   style={{ 
-                    fontSize: '1.2rem', 
-                    marginBottom: '0.75rem', 
+                    fontSize: '1.1rem', 
+                    marginBottom: '0.6rem', 
                     color: 'var(--color-text-primary)',
                     fontFamily: 'var(--font-heading)',
                     lineHeight: '1.3'
@@ -112,32 +112,14 @@ export const MethodologySection = () => {
                 {/* Description */}
                 <p 
                   style={{ 
-                    fontSize: '0.875rem', 
+                    fontSize: '0.85rem', 
                     color: 'var(--color-text-secondary)', 
-                    lineHeight: '1.65',
+                    lineHeight: '1.55',
                     margin: 0
                   }}
                 >
                   {method.description}
                 </p>
-              </div>
-
-              {/* Step Process Footer Indicator */}
-              <div 
-                style={{ 
-                  marginTop: '1.5rem', 
-                  paddingTop: '0.85rem', 
-                  borderTop: '1px solid var(--color-border-subtle)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  fontSize: '0.78rem',
-                  color: 'var(--color-text-muted)',
-                  fontWeight: '500'
-                }}
-              >
-                <span>Phase 0{index + 1} Protocol</span>
-                {index < methodologies.length - 1 && <ArrowRight size={13} style={{ color: 'var(--color-accent-gold)' }} />}
               </div>
             </div>
           ))}

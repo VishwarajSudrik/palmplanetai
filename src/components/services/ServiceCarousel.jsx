@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { servicesList, serviceCategories } from '../../data/servicesData';
 import { ServiceCard } from './ServiceCard';
 import { ServiceDetailModal } from './ServiceDetailModal';
-import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export const ServiceCarousel = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -62,18 +62,14 @@ export const ServiceCarousel = () => {
   return (
     <div style={{ position: 'relative' }}>
       
-      {/* Category Filter Pills + Controls Bar */}
+      {/* Category Filter Pills */}
       <div 
         style={{
           display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '1.25rem',
-          marginBottom: '2.25rem',
-          textAlign: 'center'
+          justifyContent: 'center',
+          marginBottom: '2rem'
         }}
       >
-        {/* Category Pills */}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center' }}>
           <button
             onClick={() => handleCategoryChange('all')}
@@ -114,116 +110,115 @@ export const ServiceCarousel = () => {
             </button>
           ))}
         </div>
-
-        {/* Carousel Arrow Navigation Buttons */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-          <button
-            onClick={() => setIsAutoplay(!isAutoplay)}
-            aria-label={isAutoplay ? "Pause slider autoplay" : "Start slider autoplay"}
-            style={{
-              background: 'rgba(255, 255, 255, 0.04)',
-              border: '1px solid var(--color-border-subtle)',
-              color: 'var(--color-text-muted)',
-              width: '38px',
-              height: '38px',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer'
-            }}
-            title={isAutoplay ? "Pause Autoplay" : "Enable Autoplay"}
-          >
-            {isAutoplay ? <Pause size={15} /> : <Play size={15} />}
-          </button>
-
-          <button
-            onClick={handlePrev}
-            aria-label="Previous services slide"
-            style={{
-              background: 'rgba(212, 175, 55, 0.1)',
-              border: '1px solid var(--color-border-gold)',
-              color: 'var(--color-accent-gold)',
-              width: '42px',
-              height: '42px',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer',
-              transition: 'all 200ms ease'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'var(--color-accent-gold)';
-              e.currentTarget.style.color = '#000';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(212, 175, 55, 0.1)';
-              e.currentTarget.style.color = 'var(--color-accent-gold)';
-            }}
-          >
-            <ChevronLeft size={20} />
-          </button>
-
-          <button
-            onClick={handleNext}
-            aria-label="Next services slide"
-            style={{
-              background: 'rgba(212, 175, 55, 0.1)',
-              border: '1px solid var(--color-border-gold)',
-              color: 'var(--color-accent-gold)',
-              width: '42px',
-              height: '42px',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer',
-              transition: 'all 200ms ease'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'var(--color-accent-gold)';
-              e.currentTarget.style.color = '#000';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(212, 175, 55, 0.1)';
-              e.currentTarget.style.color = 'var(--color-accent-gold)';
-            }}
-          >
-            <ChevronRight size={20} />
-          </button>
-        </div>
       </div>
 
-      {/* Sliding Cards Track Window */}
+      {/* Sliding Cards Track Window with Vertically Centered Side Arrow Buttons */}
       <div 
-        style={{ overflow: 'hidden', paddingBlock: '8px', marginInline: '-4px' }}
+        style={{ position: 'relative' }}
         onMouseEnter={() => setIsAutoplay(false)}
         onMouseLeave={() => setIsAutoplay(true)}
       >
-        <div
-          ref={carouselRef}
+        {/* Left Arrow Button (Vertically Centered on Left Edge) */}
+        <button
+          onClick={handlePrev}
+          aria-label="Previous services slide"
           style={{
+            position: 'absolute',
+            left: '-20px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            zIndex: 10,
+            background: 'rgba(22, 29, 43, 0.95)',
+            border: '1px solid var(--color-border-gold-strong)',
+            color: 'var(--color-accent-gold)',
+            width: '46px',
+            height: '46px',
+            borderRadius: '50%',
             display: 'flex',
-            transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)`,
-            transition: 'transform 450ms cubic-bezier(0.25, 1, 0.5, 1)'
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.6)',
+            backdropFilter: 'blur(8px)',
+            transition: 'all 200ms ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = 'var(--color-accent-gold)';
+            e.currentTarget.style.color = '#000';
+            e.currentTarget.style.transform = 'translateY(-50%) scale(1.08)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = 'rgba(22, 29, 43, 0.95)';
+            e.currentTarget.style.color = 'var(--color-accent-gold)';
+            e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
           }}
         >
-          {filteredServices.map((service) => (
-            <div
-              key={service.id}
-              style={{
-                flex: `0 0 ${100 / itemsPerPage}%`,
-                paddingInline: '8px',
-                boxSizing: 'border-box'
-              }}
-            >
-              <ServiceCard 
-                service={service} 
-                onSelect={(s) => setActiveModalService(s)} 
-              />
-            </div>
-          ))}
+          <ChevronLeft size={22} />
+        </button>
+
+        {/* Right Arrow Button (Vertically Centered on Right Edge) */}
+        <button
+          onClick={handleNext}
+          aria-label="Next services slide"
+          style={{
+            position: 'absolute',
+            right: '-20px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            zIndex: 10,
+            background: 'rgba(22, 29, 43, 0.95)',
+            border: '1px solid var(--color-border-gold-strong)',
+            color: 'var(--color-accent-gold)',
+            width: '46px',
+            height: '46px',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.6)',
+            backdropFilter: 'blur(8px)',
+            transition: 'all 200ms ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = 'var(--color-accent-gold)';
+            e.currentTarget.style.color = '#000';
+            e.currentTarget.style.transform = 'translateY(-50%) scale(1.08)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = 'rgba(22, 29, 43, 0.95)';
+            e.currentTarget.style.color = 'var(--color-accent-gold)';
+            e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
+          }}
+        >
+          <ChevronRight size={22} />
+        </button>
+
+        <div style={{ overflow: 'hidden', paddingBlock: '8px', marginInline: '-4px' }}>
+          <div
+            ref={carouselRef}
+            style={{
+              display: 'flex',
+              transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)`,
+              transition: 'transform 450ms cubic-bezier(0.25, 1, 0.5, 1)'
+            }}
+          >
+            {filteredServices.map((service) => (
+              <div
+                key={service.id}
+                style={{
+                  flex: `0 0 ${100 / itemsPerPage}%`,
+                  paddingInline: '8px',
+                  boxSizing: 'border-box'
+                }}
+              >
+                <ServiceCard 
+                  service={service} 
+                  onSelect={(s) => setActiveModalService(s)} 
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -231,10 +226,10 @@ export const ServiceCarousel = () => {
       <div 
         style={{
           display: 'flex',
-          justify: 'center',
+          justifyContent: 'center',
           alignItems: 'center',
           gap: '8px',
-          marginTop: '2rem'
+          marginTop: '1.75rem'
         }}
       >
         {Array.from({ length: maxIndex + 1 }).map((_, idx) => (

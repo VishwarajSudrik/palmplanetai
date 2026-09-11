@@ -10,6 +10,13 @@ import { BookingPage } from './pages/BookingPage';
 import { AstroBlogPage } from './pages/AstroBlogPage';
 import { ContactPage } from './pages/ContactPage';
 import { NotFoundPage } from './pages/NotFoundPage';
+import { AstrologyDashboardPage } from './pages/astrology/AstrologyDashboardPage';
+import { BirthDetailsPage } from './pages/astrology/BirthDetailsPage';
+import { ReportSelectionPage } from './pages/astrology/ReportSelectionPage';
+import { ReportViewerPage } from './pages/astrology/ReportViewerPage';
+import { ReportHistoryPage } from './pages/astrology/ReportHistoryPage';
+import { KundliMatchingPage } from './pages/astrology/KundliMatchingPage';
+import { NumerologyPage } from './pages/astrology/NumerologyPage';
 import { contactInfo } from './data/navigationData';
 
 export default function App() {
@@ -61,6 +68,16 @@ export default function App() {
             <Route path="/booking" element={<BookingPage />} />
             <Route path="/astro-blog" element={<AstroBlogPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            
+            {/* Astrology Report Generation Module Routes */}
+            <Route path="/astrology" element={<AstrologyDashboardPage />} />
+            <Route path="/astrology/birth-details" element={<BirthDetailsPage />} />
+            <Route path="/astrology/select-report" element={<ReportSelectionPage />} />
+            <Route path="/astrology/reports" element={<ReportHistoryPage />} />
+            <Route path="/astrology/reports/:reportId" element={<ReportViewerPage />} />
+            <Route path="/astrology/kundli-matching" element={<KundliMatchingPage />} />
+            <Route path="/astrology/numerology" element={<NumerologyPage />} />
+
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>

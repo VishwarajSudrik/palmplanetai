@@ -177,7 +177,7 @@ export const ServiceDetailModal = ({ service, onClose }) => {
 
             <button onClick={handleBookService} className="btn btn-primary" style={{ padding: '0.8rem 1.75rem' }}>
               <Icons.Calendar size={18} />
-              <span>Book Appointment for {service.title}</span>
+              <span>Book Appointment</span>
             </button>
           </div>
 

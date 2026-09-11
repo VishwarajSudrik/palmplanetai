@@ -3,6 +3,7 @@ import { SEOHead } from '../components/common/SEOHead';
 import { HeroSection } from '../components/home/HeroSection';
 import { WhoWeAreSection } from '../components/home/WhoWeAreSection';
 import { MethodologySection } from '../components/home/MethodologySection';
+import { ReportsSection } from '../components/home/ReportsSection';
 import { ServiceCarousel } from '../components/services/ServiceCarousel';
 import { FounderHighlight } from '../components/home/FounderHighlight';
 import { VisionMissionSection } from '../components/home/VisionMissionSection';
@@ -29,13 +30,16 @@ export const HomePage = () => {
       {/* 3. Methodology Section */}
       <MethodologySection />
 
-      {/* 4. Sliding Services Overview Section */}
-      <section className="section-padding">
+      {/* 4. Astrological AI Reports Section ("My Reports") */}
+      <ReportsSection />
+
+      {/* 5. Sliding Services Overview Section */}
+      <section className="section-padding section-bg-alt">
         <div className="container">
           <SectionHeader
             eyebrow="What We Do"
             title="Our 16 Predictive Service Categories"
-            description="We use Palmistry, Horoscope, and Vedic Numerology. These methods are being used for cross validation so that higher accuracy can be achieved."
+            description="Specialized consultations combining Horoscope, Palmistry, and Vedic Numerology for cross-validated insights."
           />
 
           <ServiceCarousel />
@@ -60,27 +64,27 @@ export const HomePage = () => {
               flexWrap: 'wrap',
               justifyContent: 'space-between',
               alignItems: 'center',
-              gap: '2rem',
-              padding: 'clamp(2rem, 4vw, 3.5rem)'
+              gap: '1.5rem',
+              padding: 'clamp(1.75rem, 4vw, 2.75rem)'
             }}
           >
-            <div style={{ maxWidth: '600px' }} className="responsive-banner-text">
-              <span className="eyebrow">Virtual & Personal Consultations</span>
-              <h2 className="h2-title" style={{ marginTop: '0.4rem', marginBottom: '0.75rem' }}>
-                Schedule Your Detailed Astrological Reading
+            <div style={{ maxWidth: '580px' }} className="responsive-banner-text">
+              <span className="eyebrow">Ready For Clarity?</span>
+              <h2 className="h2-title" style={{ marginTop: '0.4rem', marginBottom: '0.5rem', fontSize: 'clamp(1.5rem, 3vw, 2rem)' }}>
+                Schedule Your Astrological Reading
               </h2>
-              <p style={{ color: 'var(--color-text-secondary)', marginBottom: 0, lineHeight: '1.65' }}>
-                Detailed readings provided without physical presence via virtual tools. Required information requested 1 day before Virtual/Personal Meeting for detailed & better analysis.
+              <p style={{ color: 'var(--color-text-secondary)', marginBottom: 0, lineHeight: '1.6', fontSize: '0.95rem' }}>
+                Virtual & personal consultations backed by scientific cross-validation. Simple 24-hour prior submission protocol.
               </p>
             </div>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }} className="responsive-btn-group">
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.85rem', justifyContent: 'center' }} className="responsive-btn-group">
               <Link to="/booking" className="btn btn-primary">
-                <Calendar size={18} />
+                <Calendar size={17} />
                 <span>Book Appointment</span>
               </Link>
               <a href={`tel:${contactInfo.phoneClean}`} className="btn btn-outline">
-                <Phone size={16} />
+                <Phone size={15} />
                 <span>Call +91-9665153661</span>
               </a>
             </div>

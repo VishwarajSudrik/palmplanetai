@@ -7,66 +7,66 @@ export const siteContent = {
   },
   hero: {
     eyebrow: 'Palm Planet Research Centre',
-    headline: 'Predictive Accuracy Through Empirical Cross-Validation',
-    subheadline: 'Harmonizing Vedic Astrology, Palmistry (lines & mountains), and Vedic Numerology to provide deep analytical clarity without requiring physical presence.',
+    headline: 'Empirical Vedic Astrology & Palmistry Research',
+    subheadline: 'Precision life guidance through multi-system cross-validation of Horoscope charts, Palm line metrics, and Vedic Numerology.',
     primaryCta: 'Explore Services',
     secondaryCta: 'Book Consultation'
   },
   about: {
-    title: 'Who We Are',
+    title: 'Empirical Predictive Excellence',
     subtitle: 'The Palm Planet Research Centre',
-    description: "The Palm Planet Research Centre try to attain predictive accuracy through study & comparison of individual's horoscope with palm lines, mountains & Vedic Numerology analysis. To conduct these, we request individual's details as follows. We provide detailed astrological readings without physical presence; meetings can be conducted via virtual tools. Required information is requested one day before Virtual/Personal Meetings for detailed & better analysis.",
+    description: 'We bridge ancient Vedic wisdom with modern analytical precision cross validating individual horoscopes, palmar features, and numerological frequencies to deliver verified clarity for life decisions.',
     methodologies: [
       {
         id: 'palmistry',
-        title: 'Palmistry Readings',
-        subtitle: 'Palm Lines & Mountains Analysis',
-        description: 'Empirical analysis of hand geometry, primary lines (Life, Head, Heart, Fate), secondary markings, and palmar mounts (Jupiter, Saturn, Sun, Mercury, Venus, Mars, Moon) for character and timing cross-validation.'
+        title: 'Palmistry Analysis',
+        subtitle: 'Hand Lines & Mounts',
+        description: 'Analyzing palm lines, mounts, and hand geometry for structural character and timing verification.'
       },
       {
         id: 'horoscope',
-        title: 'Horoscope Readings',
-        subtitle: 'Vedic Astrology (Jyotish)',
-        description: 'Calculated precision mapping of planetary positions, Dasha cycles, divisional charts (Vargas), and transits (Gochara) to evaluate karmic influences and lifecycle periods.'
+        title: 'Vedic Astrology',
+        subtitle: 'Planetary Transits & Dasha',
+        description: 'Mapping planetary Dashas, Vargas, and Gochara transits to map key life phases and karmic cycles.'
       },
       {
         id: 'numerology',
         title: 'Vedic Numerology',
-        subtitle: 'Sacred Number Vibrations',
-        description: 'Analytical evaluation of core personal numbers derived from birth date and name frequencies to cross-verify psychological archetypes and pivotal life cycles.'
+        subtitle: 'Core Number Vibrations',
+        description: 'Evaluating core date and name frequencies to cross-verify psychological archetypes.'
       },
       {
         id: 'cross-validation',
-        title: 'Empirical Cross-Validation',
-        subtitle: 'Multi-Disciplinary Synthesis',
-        description: 'We synthesize Palmistry, Horoscope, and Vedic Numerology. These methods are used for cross-validation so that higher predictive accuracy can be achieved.'
+        title: 'Multi-System Synthesis',
+        subtitle: 'Cross-Validation Engine',
+        description: 'Synthesizing all three systems to eliminate analytical bias and achieve maximal predictive accuracy.'
       }
     ]
   },
   founder: {
     name: 'Prashant Moholkar',
     role: 'Founder & Principal Researcher',
-    credential: 'Mechanical Engineer (Design) | FEA Specialist | Vedic Astrologer & Palmistry Researcher',
-    experienceYears: '25+ Years FEA/Design Engineering | 12+ Years Vedic Astrology & Occult Sciences',
-    intro: 'Prashant Moholkar is a seasoned Mechanical Engineer (Design) with over 25 years of professional experience in Mechanical Engineering Services and Finite Element Analysis. Renowned for his precision, dedication, and result-oriented mindset, he has successfully blended technical acumen with deep spiritual insight to guide people on their life journeys.',
-    story: 'For the past 12+ years, Prashant has been actively practicing Vedic Astrology, serving clients in Pune, across India, and overseas. His passion for ancient wisdom and spiritual sciences led him to explore the deeper realms of human destiny and consciousness. He is an avid reader of the Puranas, and his profound understanding of these sacred texts enables him to offer guidance rooted in both tradition and practical wisdom.',
+    credential: 'Mechanical Engineer (Design) | FEA Specialist | Vedic Astrologer & Researcher',
+    experienceYears: '25+ Yrs Engineering | 12+ Yrs Vedic Sciences',
+    intro: 'Prashant Moholkar combines 25+ years of Finite Element Analysis (FEA) engineering precision with 12+ years of empirical Vedic Astrology and Palmistry research to deliver evidence-backed life insights.',
+    story: 'Serving clients globally from Pune, India, Prashant integrates Puranic wisdom with scientific calculation to empower individuals with authentic direction and inner clarity.',
     disciplines: [
-      { name: 'Vedic Astrology', desc: 'Precision chart calculation and planetary Dasha interpretation.' },
-      { name: 'Palmistry', desc: 'Detailed palmar topology, lines, and mount analysis.' },
-      { name: 'Face Reading', desc: 'Physiognomy techniques to cross-reference temperaments.' },
-      { name: 'Gemology', desc: 'Elemental gem alignment for energetic resonance.' }
+      { name: 'Vedic Astrology', desc: 'Dasha & chart calculation' },
+      { name: 'Palmistry', desc: 'Palmar topology & line metrics' },
+      { name: 'Face Reading', desc: 'Physiognomy & temperament sync' },
+      { name: 'Gemology', desc: 'Energetic resonance guidance' }
     ],
-    empowerment: 'Driven by a divine intention to bring peace, prosperity, and purpose to people’s lives, Prashant has devoted himself to the sacred path of Occult Science. His work is centered on empowering individuals with clarity, inner balance, and alignment with their higher self. Each consultation is approached with compassion, integrity, and a sincere desire to uplift and transform.',
-    leadership: 'Whether you seek direction in personal, professional, or spiritual matters, Prashant Moholkar offers a unique blend of Astrological scientific calculated precision and spiritual depth—guiding you toward a more harmonious and enlightened life.'
+    empowerment: 'Driven to bring clarity, peace, and purpose, Prashant approaches every consultation with compassion, precision, and practical wisdom.',
+    leadership: 'Guiding individuals toward personal, professional, and spiritual harmony.'
   },
   visionMission: {
     vision: {
       title: 'Our Vision',
-      text: 'To elevate astrology, palmistry and other methodologies across the world from traditional belief systems to a scientifically validated discipline by which empowering individuals and organizations with research backed insights into past, present and future.'
+      text: 'To elevate Vedic Astrology and Palmistry into a scientifically validated, research-backed discipline for global decision-making.'
     },
     mission: {
       title: 'Our Mission',
-      text: 'To bridge the gap between Astrology, Palmistry, other methodologies and empirical research for practical applications.'
+      text: 'To bridge ancient wisdom with empirical cross-validation for practical, life-transforming guidance.'
     }
   },
   consultationProtocol: {
